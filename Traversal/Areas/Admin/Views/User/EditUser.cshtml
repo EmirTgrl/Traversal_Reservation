@@ -1,0 +1,26 @@
+﻿@model EntityLayer.Concrete.AppUser
+@{
+    ViewData["Title"] = "EditUser";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Rehber Güncelleme Sayfası</h1>
+<form method="post">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        @Html.Label("Ad Soyad")
+        <input type="text" asp-for="Name" class="form-control" />
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Kullanıcı Adı")
+        <input type="text" asp-for="UserName" class="form-control" />
+    </div>
+    <br />
+    <div class="form-group">
+        @Html.Label("Mail")
+        <input type="text" asp-for="Email" class="form-control" />
+    </div>
+    <br />
+    <button class="btn btn-outline-primary">Güncelle</button>
+</form>

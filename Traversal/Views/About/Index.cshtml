@@ -1,0 +1,97 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_UILayout.cshtml";
+}
+<!doctype html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Hakkımızda</title>
+    <link href="//fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="~/Traversal-Liberty/assets/css/style-liberty.css">
+</head>
+
+<body>
+    <section class="w3l-about-breadcrumb text-left">
+        <div class="breadcrumb-bg breadcrumb-bg-about py-sm-5 py-4">
+            <div class="container py-2">
+                <h2 class="title">Hakkımızda</h2>
+                <ul class="breadcrumbs-custom-path mt-2">
+                    <li><a href="/Default/Index/">Anasayfa</a></li>
+                    <li class="active"><span class="fa fa-arrow-right mx-2" aria-hidden="true"></span> Şirketimiz Hakkında </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="w3l-cta4 py-5">
+        <div class="container py-lg-5">
+            <div class="ab-section text-center">
+                <h3 class="hny-title">Tüm dünyayı gezip güzel anılarınız olsun istiyorsanız doğru yerdesiniz.</h3>
+                <p class="py-3 mb-3">
+                    Avrupa, Amerika, İskandinavya ve daha birçok şehire ve kıtaya turlarımız ve seyahatlerimiz bulunmaktadır. Şirketimiz 2023 te kurulmuş olup kısa süre içinde birçok müşterisi olup sayısız turlar düzenlemiştir. 
+                </p>
+                <a href="/Destination/Index/" class="btn btn-style btn-primary">Daha Fazlası İçin Turlarımıza Göz Atabilirsiniz</a>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-9 mx-auto">
+                    <img src="~/Traversal-Liberty/assets/images/banner3.jpg" class="img-fluid" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="w3l-content-6 py-5">
+        <div class="container py-lg-5">
+            <div class="row">
+                <div class="col-lg-6 content-6-left pr-lg-5">
+                    <h6 class="sub-title">Neden Bizi Tercih Etmelisiniz</h6>
+                    <h3 class="hny-title">Traversal'da turlar bitmez :)</h3>
+                </div>
+                <div class="col-lg-6 content-6-right mt-lg-0 mt-4">
+                    <p class="mb-3">
+                        Dünayanın hemen hemen her kıtasına, her şehrine turlarımız bulunmakta olup bu turlarımızda size eşlik eden 2 tane rehberimiz vardır. Bununla birlikte tur fiyatlarımız son derece uygun olup 10 yaş altı çocuklara indirim yapmaktayız.
+                    </p>
+                    <p class="mb-3">
+                        Size eşlik eden rehberlerimizle bol bol tarih öğrenecek, eğlenceli anlar geçirecek ve başka yerlere de bizimle seyahat etmek isteyeceksiniz.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="~/Traversal-Liberty/assets/js/jquery-3.3.1.min.js"></script>
+    <script src="~/Traversal-Liberty/assets/js/theme-change.js"></script>
+    <script src="~/Traversal-Liberty/assets/js/jquery.waypoints.min.js"></script>
+    <script src="~/Traversal-Liberty/assets/js/jquery.countup.js"></script>
+    <script>
+        $('.counter').countUp();
+    </script>
+    <script>
+        $(window).on("scroll", function () {
+            var scroll = $(window).scrollTop();
+            if (scroll >= 80) {
+                $("#site-header").addClass("nav-fixed");
+            } else {
+                $("#site-header").removeClass("nav-fixed");
+            }
+        });
+        $(".navbar-toggler").on("click", function () {
+            $("header").toggleClass("active");
+        });
+        $(document).on("ready", function () {
+            if ($(window).width() > 991) {
+                $("header").removeClass("active");
+            }
+            $(window).on("resize", function () {
+                if ($(window).width() > 991) {
+                    $("header").removeClass("active");
+                }
+            });
+        });
+    </script>
+    <script src="~/Traversal-Liberty/assets/js/bootstrap.min.js"></script>
+</body>
+
+</html>

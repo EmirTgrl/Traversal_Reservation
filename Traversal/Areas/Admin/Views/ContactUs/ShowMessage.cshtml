@@ -1,0 +1,18 @@
+﻿@using EntityLayer.Concrete
+@model List<ContactUs>
+@{
+    ViewData["Title"] = "ShowMessage";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>Mesaj</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.MessageBody</td>
+        </tr>
+    }
+</table>

@@ -1,0 +1,73 @@
+﻿@using EntityLayer.Concrete
+@model List<Reservation>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    int count = 0;
+}
+
+<h1>Tüm Rezervasyonlar</h1>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-header">
+                <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+                <div class="heading-elements">
+                    <ul class="list-inline mb-0">
+                        <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+                        <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                        <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                        <li><a data-action="close"><i class="ft-x"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-content collapse show">
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Lokasyon</th>
+                                    <th>Kişi Sayısı</th>
+                                    <th>Rezervasyon Tarihi</th>
+                                    <th>Durum</th>
+                                    <th>Rezervasyon Onay Durumu</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    count++;
+                                    <tr>
+                                        <td>@count</td>
+                                        <td>@item.Destination.City</td>
+                                        <td>@item.PersonCount</td>
+                                        <td>@(((DateTime)item.ReservationDate).ToString("dd-MMM-yyyy"))</td>
+                                        <td>@item.Status</td>
+                                        <td>
+                                            @if (item.Status == "Onay Bekliyor")
+                                            {
+                                                <a class="btn btn-success" href="/Admin/Reservation/Approve/@item.ReservationID">Onayla</a>
+                                                <a class="btn btn-warning" href="/Admin/Reservation/Reject/@item.ReservationID">Reddet</a>
+                                            }
+                                            else if (item.Status == "Onaylandı")
+                                            {
+                                                <span class="btn btn-success">Onaylandı</span>
+                                            }
+                                            else if (item.Status == "Reddedildi")
+                                            {
+                                                <span class="btn btn-warning">Reddedildi</span>
+                                            }
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -31,19 +31,6 @@ Giriş yapan kullanıcılar tur rezervasyonu yapabilir ve yaptıkları rezervasy
 
 ---
 
-## 🚀 Kurulum Adımları
-
-1. Repositori'yi klonlayın:  
-   `git clone https://github.com/kullaniciadi/tur-rezervasyon-sistemi.git`
-
-2. Visual Studio ile projeyi açın.
-
-3. `Web.config` veya `appsettings.json` dosyasında veritabanı bağlantısını ayarlayın.
-
-4. Projeyi çalıştırın (F5 veya Ctrl+F5).
-
----
-
 # 🌍 Tour Reservation System
 
 A web-based platform that helps users choose tours for the countries they want to visit.  
@@ -74,16 +61,3 @@ Logged-in users can make tour reservations and access their reservation details.
 - 🌐 ASP.NET (MVC / Core)
 - 🗃️ Microsoft SQL Server (MSSQL)
 - 🧩 Entity Framework
-
----
-
-## 🚀 Installation Steps
-
-1. Clone the repository:  
-   `git clone https://github.com/yourusername/tour-reservation-system.git`
-
-2. Open the project in Visual Studio.
-
-3. Configure the database connection in `Web.config` or `appsettings.json`.
-
-4. Run the project (F5 or Ctrl+F5).
